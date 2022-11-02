@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+  --clr-primary-200: hsl(215, 51%, 70%);
+  --clr-primary-300: hsl(178, 100%, 50%);
+
+
+  --clr-neutral-500: hsl(217, 54%, 11%);
+  --clr-neutral-400: hsl(216, 50%, 16%);
+  --clr-neutral-300: hsl(215, 32%, 27%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --fs-600:600;
+  --fs-400:400;
+   --fs-300:300;
+}
+*,
+*::before,
+::after{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: 'Outfit', sans-serif;
+    font-size:18px;
+    background:var(--clr-neutral-500);
+    line-height: 1.5;
+}
+img{
+    width:100%;
+    border-radius:10px;
+}
+ul li{
+    list-style: none;
+}
+.container{
+    display:grid;
+    place-items:center;
+    margin-inline: 3rem;
+    margin-block:15vh;
+}
+.card{
+    background:var(--clr-neutral-400);
+    max-width:15em;
+    padding:1rem;
+    height:auto;
+    border-radius: 10px;
+}
+.flex{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+h3{
+    color:var(--clr-neutral-100);
+    cursor:pointer;
+}
+h3:hover,
+h3:focus{
+    color:var(--clr-primary-300);
+}
+.header p{
+    color:var(--clr-primary-200);
+    font-weight: var(--fs-400);
+    font-size: 14px;
+    margin-top: 0.5rem;
+}
+.links{
+    margin-block:1rem;
+}
+.links li:nth-child(1){
+    color:var(--clr-primary-300);
+    font-weight:var(--fs-300);
+}
+.links li:nth-child(2){
+    color:var(--clr-primary-200);
+    font-weight: var(--fs-300);
+}
+.footer img{
+    width:15%;
+    border: solid var(--clr-neutral-100);
+    border-radius: 50%;
+    margin-top: 0.5rem;
+}
+.footer{
+    border-top: 0.2px solid var(--clr-neutral-300);
+}
+.footer p{
+    margin-top: 0.5rem; 
+    color:var(--clr-neutral-100);
+    font-size:16px;
+    font-weight: var(--fs-300);
+    cursor:pointer;
+}
+.footer span{
+    color:var(--clr-primary-200);
+    font-weight:var(--fs-300);
+    font-size:16px;
+    margin-right:0.5rem;
+}
+.footer p:hover,
+.footer p:focus{
+    color:var(--clr-primary-300);
+
+}
+.main__img{
+    position: relative;
+    cursor:pointer;
+}
+.main__img::before{
+    content:'';
+    background: var(--clr-primary-300);
+    position: absolute;
+    width: 100%;
+    height: 98%;
+    top:0;
+    left:0;
+    border-radius: 10px;
+    mix-blend-mode:normal;
+    opacity: 0.4;
+    display: none;
+}
+.main__img::after{
+    content:url(icon-view.svg);
+    position: absolute;
+    top:40%;
+    right:40%;
+    display: none;
+}
+.main__img:hover::before,
+.main__img:focus::before,
+.main__img:hover::after,
+.main__img:focus::after{
+    display:block;
+}
